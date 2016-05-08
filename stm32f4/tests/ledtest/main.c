@@ -26,7 +26,7 @@ void main_task(void *args)
   for(;;) {
     for (i = 0; i < led_count(); ++i)
       led_set(i, (i & 1) == 0);
-    vTaskDelay(1000);
+    vTaskDelay(10000);
 
     for (i = 0; i < led_count(); ++i)
       led_set(i, (i & 1) != 0);

@@ -28,6 +28,9 @@ all: stm32f4/tests/ledtest/ledtest     \
      stm32f4/tests/ledtest/ledtest.bin \
      stm32f4/tests/ledtest/ledtest.ihex
 
+flash: ledtest.bin
+	st-flash write ledtest.bin 0x8000000
+
 clean::
 	$(RM) $(ledtest_OBJECTS)
 	$(RM) stm32f4/tests/ledtest/ledtest
